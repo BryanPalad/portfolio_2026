@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import MessengerButton from "@/components/MessengerButton";
 
-const inter = Inter({ subsets: ["latin"] });
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
 
 export const metadata: Metadata = {
-  title: "Bryan's Portfolio",
-  description: "Modern & Minimalist Portfolio",
+  title: "Bryan Palad - Professional CV",
+  description: "Professional CV portfolio for Bryan Palad",
   metadataBase: new URL("https://bryanpalad.vercel.app"),
   openGraph: {
     title: "Bryan's Portfolio",
@@ -40,14 +49,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${sourceSans.variable} ${lora.variable} font-sans`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
             {children}
+            <MessengerButton />
           </ThemeProvider>  
       </body>
     </html>
