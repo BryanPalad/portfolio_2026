@@ -91,7 +91,7 @@ export default function Home() {
         <ProjectsSection projects={projects.slice(0, 4)} />
 
         <footer className="pb-2 pt-1 text-center text-sm text-slate-500 dark:text-slate-400">
-          Copyright © {year} Bryan Palad
+          Copyright © {year} <strong>Bryan Palad</strong>
         </footer>
       </div>
     </main>
