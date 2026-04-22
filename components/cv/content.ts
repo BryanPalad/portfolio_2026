@@ -39,7 +39,7 @@ export const experienceJourney: JourneyItem[] = [
     period: "2024 - 2025",
     startDate: "2024-08-12",
     endDate: "2025-04-30",
-    title: "Software Engineer",
+    title: "Software Engineer (Part Time)",
     company: "Arxon Solutions LLC",
     detail:
       "Delivered scalable Next.js applications, testing workflows, and backend integrations for distributed teams.",
@@ -76,3 +76,64 @@ export const experienceJourney: JourneyItem[] = [
     ],
   }
 ];
+
+export const groupedStacks = [
+  {
+    title: "Frontend Development",
+    items: [
+      "JavaScript",
+      "VueJS",
+      "ReactJS",
+      "NextJS",
+      "TypeScript",
+      "SCSS",
+      "Tailwind CSS",
+      "Material UI",
+      "ShadCN",
+      "Aceternity UI",
+      "Redux",
+      "Context API",
+      "Responsive Web Design",
+    ],
+  },
+  {
+    title: "Backend Development",
+    items: ["Node.js", "Fastify", "Express", "Java", "Spring Boot"],
+  },
+  {
+    title: "Databases",
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Supabase"],
+  },
+  {
+    title: "Deployment & Version Control",
+    items: ["Vercel", "Netlify", "Namecheap", "Git", "GitHub", "GitLab", "Bitbucket"],
+  },
+  {
+    title: "Tools & Developer Utilities",
+    items: [
+      "VS Code",
+      "IntelliJ IDEA",
+      "DataGrip",
+      "Postman",
+      "NPM",
+      "Jest",
+      "Figma",
+      "ChatGPT",
+    ],
+  },
+  {
+    title: "E-commerce, CMS & SEO",
+    items: [
+      "Shopify",
+      "Shopify Liquid",
+      "WordPress",
+      "Elementor",
+      "Yoast SEO",
+      "GSC",
+    ],
+  },
+  {
+    title: "Methodology",
+    items: ["Agile Scrum Methodology"],
+  },
+]; 

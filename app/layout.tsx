@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Lora, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import MessengerButton from "@/components/MessengerButton";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -18,6 +17,11 @@ export const metadata: Metadata = {
   title: "Bryan Palad - Professional CV",
   description: "Professional CV portfolio for Bryan Palad",
   metadataBase: new URL("https://bryanpalad.vercel.app"),
+  icons: {
+    icon: "/heroImg/BryanPalad2.png",
+    shortcut: "/heroImg/BryanPalad2.png",
+    apple: "/heroImg/BryanPalad2.png",
+  },
   openGraph: {
     title: "Bryan's Portfolio",
     description: "A modern & minimalist web developer portfolio.",
@@ -57,7 +61,6 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
-            <MessengerButton />
           </ThemeProvider>  
       </body>
     </html>
