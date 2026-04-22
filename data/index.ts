@@ -72,17 +72,17 @@ export const gridItems = [
 ];
 
 export const projects = [
-  {
-    id: 1,
-    title: "Tesla UI",
-    des: "Mini project that helps me utilize my skills in responsive web development (Media queries, flex box and SCSS).",
-    img: "/projectsImg/teslaclone.PNG",
-    iconLists: ["/skills/frontend/reactjs.png", "/skills/frontend/sass.svg"],
-    link: "https://teslaui-eight.vercel.app/",
-    github: "",
-    googleplayLink: "",
-    appstoreLink: "",
-  },
+  // {
+  //   id: 1,
+  //   title: "Tesla UI",
+  //   des: "Mini project that helps me utilize my skills in responsive web development (Media queries, flex box and SCSS).",
+  //   img: "/projectsImg/teslaclone.PNG",
+  //   iconLists: ["/skills/frontend/reactjs.png", "/skills/frontend/sass.svg"],
+  //   link: "https://teslaui-eight.vercel.app/",
+  //   github: "",
+  //   googleplayLink: "",
+  //   appstoreLink: "",
+  // },
   {
     id: 2,
     title: "Sneaks Ecommerce",
@@ -286,20 +286,12 @@ export const frontEndStack = [
 
 export const backEndStack = [
   {
-    title: "PHP",
-    img: "/skills/backend/php.png",
-  },
-  {
     title: "Java",
     img: "/skills/backend/java.png",
   },
   {
     title: "Java Spring Boot",
     img: "/skills/backend/spring.png",
-  },
-  {
-    title: "C#",
-    img: "/skills/backend/c-sharp.png",
   },
 ];
 

@@ -6,7 +6,6 @@ import { useTheme } from "next-themes";
 import {
   FaDownload,
   FaEnvelope,
-  FaLocationDot,
   FaMoon,
   FaSun,
 } from "react-icons/fa6";
@@ -40,7 +39,9 @@ const ProfileHeader = () => {
               Software Developer / Frontend Engineer
             </p>
             <p className="mt-1 inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
-              <FaLocationDot className="text-sky-600 dark:text-cyan-300" />
+              <span role="img" aria-label="Philippines flag" className="text-base leading-none">
+                🇵🇭
+              </span>
               Philippines
             </p>
           </div>
