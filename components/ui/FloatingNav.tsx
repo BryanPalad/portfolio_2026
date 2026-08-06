@@ -12,7 +12,7 @@ import Link from "next/link";
 interface NavItemsProps {
   name: string;
   link: string;
-  icon?: JSX.Element;
+  icon?: React.ReactElement;
 }
 
 export const FloatingNav = ({
