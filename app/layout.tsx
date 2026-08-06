@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { Lora, Source_Sans_3 } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./provider";
 
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-heading",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bryan Palad - Professional CV",
-  description: "Professional CV portfolio for Bryan Palad",
+  title: "Bryan Palad | Software Developer",
+  description:
+    "Portfolio of Bryan Palad, a software developer and frontend engineer based in the Philippines.",
   metadataBase: new URL("https://bryanpalad.vercel.app"),
   icons: {
     icon: "/heroImg/BryanPalad2.png",
@@ -52,16 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${sourceSans.variable} ${lora.variable} font-sans`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>  
+    <html lang="en" className="dark">
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
   );

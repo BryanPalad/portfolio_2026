@@ -48,7 +48,11 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                     {project.iconLists.map((icon) => (
                       <span
                         key={`${project.id}-${icon}`}
-                        className="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-white dark:border-white/15 dark:bg-black/35"
+                        className={`flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-white dark:border-white/15 ${
+                          icon.includes("nextjs")
+                            ? "dark:bg-white"
+                            : "dark:bg-black/35"
+                        }`}
                       >
                         <Image
                           src={icon}
