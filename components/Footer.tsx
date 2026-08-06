@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import { FaFileDownload } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const date = new Date();
@@ -21,13 +22,13 @@ const Footer = () => {
           achieve your goals.
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:mt-2 mt-4">
-          <a href="/#about">
+          <Link href="/#about">
             <MagicButton
               title="Let's get in touch"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </Link>
 
           <a href="/files/BryanPalad-CV.pdf" download>
             <MagicButton
