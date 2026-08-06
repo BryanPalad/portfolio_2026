@@ -72,6 +72,36 @@ export const gridItems = [
 ];
 
 export const projects = [
+  {
+    id: 10,
+    title: "LogiLedger — Logistics Revenue Monitoring",
+    des: "A private logistics operations workspace for tracking trips, routes, fleet and crew activity, revenue, expenses, fuel costs, and estimated profit from one focused dashboard.",
+    img: "/projectsImg/logiledger.png",
+    iconLists: [
+      "/skills/frontend/typescript.png",
+      "/skills/frontend/reactjs.png",
+      "/cloud.svg",
+    ],
+    link: "https://z-l-logistics-revenue-monitoring.pages.dev",
+    github: "",
+    googleplayLink: "",
+    appstoreLink: "",
+  },
+  {
+    id: 11,
+    title: "CoreZigma Review — NCLEX Prep Platform",
+    des: "An adaptive NCLEX preparation platform with exam simulators, tutorial videos, nursing content cards, test banks, learning plans, and progress-focused review tools. I served as the pioneering Senior Frontend Developer, establishing the frontend foundation and collaborating with a growing development team.",
+    img: "/projectsImg/corezigma-nclex.png",
+    iconLists: [
+      "/skills/frontend/nextjs.png",
+      "/skills/frontend/typescript.png",
+      "/skills/frontend/tailwind.png",
+    ],
+    link: "https://devcorezigmareview.vercel.app/nclex",
+    github: "",
+    googleplayLink: "",
+    appstoreLink: "",
+  },
   // {
   //   id: 1,
   //   title: "Tesla UI",

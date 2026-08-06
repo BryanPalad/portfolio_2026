@@ -1,43 +1,38 @@
-import { projects, socialMedia } from "@/data";
-import AboutCard from "@/components/cv/AboutCard";
-import ExperienceJourneyCard from "@/components/cv/ExperienceJourneyCard";
-import ProfileHeader from "@/components/cv/ProfileHeader";
-import ProjectsSection from "@/components/cv/ProjectsSection";
-import SocialLinksCard from "@/components/cv/SocialLinksCard";
-import TechStackCard from "@/components/cv/TechStackCard";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
+import Grid from "@/components/Grid";
+import Hero from "@/components/Hero";
 import PortfolioChatbot from "@/components/PortfolioChatbot";
-import { experienceJourney, groupedStacks } from "@/components/cv/content";
-
-const githubLink = socialMedia.find((item) => item.id === 1)?.link ?? "#";
-const linkedInLink = socialMedia.find((item) => item.id === 2)?.link ?? "#";
-const year = new Date().getFullYear();
+import RecentProjects from "@/components/RecentProjects";
+import Skills from "@/components/Skills";
+import { FloatingNav } from "@/components/ui/FloatingNav";
+import { SectionReveal } from "@/components/ui/SectionReveal";
+import { navItems } from "@/data";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-100 px-4 py-8 text-slate-900 transition-colors dark:bg-[#090e16] dark:text-slate-100 md:px-8 md:py-10">
-      <div className="mx-auto max-w-6xl space-y-5">
-        <ProfileHeader />
-
-        <section className="grid gap-5 lg:grid-cols-[1.6fr_1fr]">
-          <AboutCard />
-          <SocialLinksCard
-            githubLink={githubLink}
-            linkedInLink={linkedInLink}
-          />
-        </section>
-
-        <section className="grid gap-5 lg:grid-cols-[1.6fr_1fr]">
-          <TechStackCard groups={groupedStacks} />
-          <ExperienceJourneyCard items={experienceJourney} />
-        </section>
-
-        <ProjectsSection projects={projects.slice(0, 4)} />
-
+    <main className="relative flex items-center justify-center overflow-clip bg-[#f6f7fb] px-5 text-slate-900 transition-colors dark:bg-black-100 dark:text-white sm:px-10">
+      <div className="w-full max-w-7xl">
+        <FloatingNav navItems={navItems} />
+        <SectionReveal>
+          <Hero />
+        </SectionReveal>
+        <SectionReveal>
+          <Grid />
+        </SectionReveal>
+        <SectionReveal>
+          <Experience />
+        </SectionReveal>
+        <SectionReveal>
+          <Skills />
+        </SectionReveal>
+        <SectionReveal>
+          <RecentProjects />
+        </SectionReveal>
+        <SectionReveal>
+          <Footer />
+        </SectionReveal>
         <PortfolioChatbot />
-
-        <footer className="pb-2 pt-1 text-center text-sm text-slate-500 dark:text-slate-400">
-          Copyright © {year} <strong>Bryan Palad</strong>
-        </footer>
       </div>
     </main>
   );
