@@ -1,0 +1,3 @@
+[mcp_servers.odibi]
+url = "https://www.odibi.io/api/mcp"
+bearer_token_env_var = "ODIBI_AGENT_KEY_BRYANPALAD_VERCEL_APP"

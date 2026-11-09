@@ -13,10 +13,10 @@ const Footer = () => {
   return (
     <footer className="w-full md:pt-24 pt-0 pb-10 mb-[60px] md:mb-5" id="contact">
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
+        <h2 className="heading lg:max-w-[45vw]">
           Ready to take <span className="text-purple">your</span> digital
           presence to the next level
-        </h1>
+        </h2>
         <p className="my-5 text-center text-slate-600 dark:text-white-200 md:mt-10">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
@@ -44,9 +44,9 @@ const Footer = () => {
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © {year} Bryan
         </p>
-                  <h2 className="max-w-80 text-center text-xs uppercase tracking-widest text-slate-500 dark:text-blue-100">
+                  <p className="max-w-80 text-center text-xs uppercase tracking-widest text-slate-500 dark:text-blue-100">
                     Powered by Next, TS and Aceternity UI
-                  </h2>
+                  </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((profile) => (
             <div

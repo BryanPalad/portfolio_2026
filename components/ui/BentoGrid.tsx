@@ -1,12 +1,13 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { GlobeDemo } from "./GridGlobe";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState } from "react";
-import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+
+const GlobeDemo = dynamic(() => import("./GridGlobe").then((m) => m.GlobeDemo), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -48,14 +49,7 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  const [showGlobe, setShowGlobe] = useState(false);
 
   const handleCopy = () => {
     const email = "paladbryanj@gmail.com";
@@ -72,9 +66,12 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
-              alt={img}
+              alt=""
+              width={img === "/HeroBanner.jpg" ? 6000 : img === "/b5.svg" ? 500 : 351}
+              height={img === "/HeroBanner.jpg" ? 4000 : img === "/b5.svg" ? 383 : 180}
+              sizes="(max-width: 768px) 100vw, 60vw"
               className={cn(imgClassName, "object-cover object-center")}
             />
           )}
@@ -85,9 +82,11 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
-              alt={spareImg}
+              alt=""
+              width={spareImg === "/b4.svg" ? 208 : 351}
+              height={spareImg === "/b4.svg" ? 96 : 180}
               className="object cover object-center w-full h-full"
             />
           )}
@@ -116,7 +115,11 @@ export const BentoGridItem = ({
 
           {id === 2 && (
             <div className="cursor-grab">
-              <GlobeDemo />
+              {showGlobe ? <GlobeDemo /> : (
+                <button type="button" onClick={() => setShowGlobe(true)} className="mt-6 flex min-h-40 w-full items-center justify-center rounded-full border border-purple/30 bg-purple/10 text-sm font-semibold text-purple">
+                  Explore interactive globe
+                </button>
+              )}
             </div>
           )}
 
@@ -151,11 +154,9 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
+                className="pointer-events-none absolute -bottom-5 right-0"
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {copied && <Image src="/confetti.gif" alt="" width={400} height={200} unoptimized />}
               </div>
 
               <MagicButton

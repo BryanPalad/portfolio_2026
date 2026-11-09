@@ -1,0 +1,4 @@
+Contact: mailto:paladbryanj@gmail.com
+Expires: 2027-11-01T00:00:00Z
+Canonical: https://bryanpalad.vercel.app/.well-known/security.txt
+Preferred-Languages: en

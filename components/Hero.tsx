@@ -1,6 +1,5 @@
 import React from "react";
 import { SpotlightNew } from "./ui/SpotlightNew";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from "next/link";
@@ -17,11 +16,10 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <Image priority={true} src={BryanPalad} alt="Bryan Palad" className="w-[150px] md:w-[200px] rounded-full bg-white shadow-xl"/>
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Designs into Interactive User Interfaces"
-          />
+          <Image priority={true} src={BryanPalad} sizes="(max-width: 768px) 150px, 200px" alt="Bryan Palad" className="w-[150px] md:w-[200px] rounded-full bg-white shadow-xl"/>
+          <h1 className="my-4 text-center text-[40px] font-bold leading-snug tracking-wide md:text-5xl lg:text-6xl">
+            Transforming Designs into <span className="text-purple">Interactive User Interfaces</span>
+          </h1>
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m{" "}

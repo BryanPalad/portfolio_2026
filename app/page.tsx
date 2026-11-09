@@ -14,9 +14,7 @@ export default function Home() {
     <main className="relative flex items-center justify-center overflow-clip bg-[#f6f7fb] px-5 text-slate-900 transition-colors dark:bg-black-100 dark:text-white sm:px-10">
       <div className="w-full max-w-7xl">
         <FloatingNav navItems={navItems} />
-        <SectionReveal>
-          <Hero />
-        </SectionReveal>
+        <Hero />
         <SectionReveal>
           <Grid />
         </SectionReveal>

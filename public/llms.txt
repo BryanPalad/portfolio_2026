@@ -1,0 +1,11 @@
+# Bryan Palad
+
+> Software Developer and Front-End Engineer based in the Philippines.
+
+## Portfolio
+- [About](https://bryanpalad.vercel.app/#about): Background and collaboration.
+- [Experience](https://bryanpalad.vercel.app/#experience): Work history.
+- [Skills](https://bryanpalad.vercel.app/#skills): Frontend, backend, data, and tools.
+- [Projects](https://bryanpalad.vercel.app/#projects): Selected projects.
+- [Contact](https://bryanpalad.vercel.app/#contact): Contact and social links.
+- [CV](https://bryanpalad.vercel.app/files/BryanPalad-CV.pdf): Downloadable resume.

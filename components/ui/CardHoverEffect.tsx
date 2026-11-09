@@ -60,9 +60,9 @@ export const CardHoverEffect = ({
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-purple">
               Project {String(index + 1).padStart(2, "0")}
             </p>
-            <h2 className="text-2xl font-bold leading-tight text-slate-900 dark:text-white md:text-3xl">
+            <h3 className="text-2xl font-bold leading-tight text-slate-900 dark:text-white md:text-3xl">
               {item.title}
-            </h2>
+            </h3>
             <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-neutral-400 md:text-base">
               {item.des}
             </p>

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Bryan Palad, a software developer and frontend engineer based in the Philippines.",
   metadataBase: new URL("https://bryanpalad.vercel.app"),
+  alternates: { canonical: "/" },
   icons: {
     icon: "/heroImg/BryanPalad2.png",
     shortcut: "/heroImg/BryanPalad2.png",
@@ -46,6 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Person", "@id": "https://bryanpalad.vercel.app/#person", name: "Bryan Palad", url: "https://bryanpalad.vercel.app/", jobTitle: "Software Developer / Front-End Engineer", image: "https://bryanpalad.vercel.app/heroImg/BryanPalad2.png", sameAs: ["https://github.com/BryanPalad", "https://www.linkedin.com/in/bryan-justin-palad-4632b3234/"] },
+            { "@type": "WebSite", "@id": "https://bryanpalad.vercel.app/#website", url: "https://bryanpalad.vercel.app/", name: "Bryan Palad | Software Developer", author: { "@id": "https://bryanpalad.vercel.app/#person" } },
+          ],
+        }).replace(/</g, "\\u003c") }} />
         {children}
       </body>
     </html>

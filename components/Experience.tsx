@@ -81,9 +81,9 @@ const ExperienceCard = ({ item }: { item: JourneyItem }) => {
         <span className="absolute -left-[43px] top-8 h-4 w-4 rounded-full border-4 border-[#f6f7fb] bg-purple shadow-[0_0_0_4px_rgba(37,99,235,0.12)] dark:border-[#000319] md:-left-[53px]" />
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div className="min-w-0">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white md:text-2xl">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white md:text-2xl">
               {item.title}
-            </h2>
+            </h3>
             <p className="mt-1 text-sm font-medium text-purple">
               {item.company}
             </p>
@@ -155,9 +155,9 @@ const ExperienceCard = ({ item }: { item: JourneyItem }) => {
 const Experience = () => (
   <section className="mt-20 scroll-mt-24 py-20" id="experience">
     <div className="mx-auto mb-10 max-w-3xl text-center">
-      <h1 className="heading">
+      <h2 className="heading">
         Work <span className="text-purple">Experience</span>
-      </h1>
+      </h2>
     </div>
 
     <div className="relative mx-auto max-w-6xl space-y-5">

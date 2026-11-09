@@ -36,7 +36,7 @@ const SkillGroup = ({
   items,
 }: (typeof stackGroups)[number]) => (
   <article className="grid gap-6 border-b border-slate-200 py-8 last:border-b-0 dark:border-white/[0.09] md:grid-cols-[180px_1fr] md:gap-10">
-    <h2 className="text-lg font-semibold text-slate-900 dark:text-white md:text-xl">{title}</h2>
+    <h3 className="text-lg font-semibold text-slate-900 dark:text-white md:text-xl">{title}</h3>
 
     <div className="grid grid-cols-3 gap-x-5 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
       {items.map((item) => (
@@ -65,9 +65,9 @@ const SkillGroup = ({
 const Skills = () => (
   <section className="relative z-10 scroll-mt-24 py-20" id="skills">
     <div className="relative z-10 mx-auto mb-10 max-w-2xl text-center">
-      <h1 className="heading">
+      <h2 className="heading">
         Tech <span className="text-purple">Stack</span>
-      </h1>
+      </h2>
     </div>
 
     <div className="relative z-10 mx-auto max-w-5xl">

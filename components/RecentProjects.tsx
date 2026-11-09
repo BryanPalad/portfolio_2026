@@ -8,9 +8,9 @@ const RecentProjects = () => {
       <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.28em] text-purple">
         Selected work
       </p>
-      <h1 className="heading">
+      <h2 className="heading">
         Recent <span className="text-purple">Projects</span>
-      </h1>
+      </h2>
       <CardHoverEffect items={projects} />
     </section>
   );
