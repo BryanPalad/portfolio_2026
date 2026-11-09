@@ -4,7 +4,11 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 const groqApiKey = process.env.GROQ_API_KEY;
-const groqModel = process.env.GROQ_MODEL ?? "llama-3.1-8b-instant";
+const configuredModel = process.env.GROQ_MODEL?.trim();
+// Migrate existing deployments that still have the old default in their env.
+const groqModel = !configuredModel || configuredModel === "llama-3.1-8b-instant"
+  ? "openai/gpt-oss-20b"
+  : configuredModel;
 
 const SYSTEM_PROMPT = `You are Bryan's portfolio assistant. You only answer questions related to Bryan's professional profile.
 
@@ -112,7 +116,10 @@ export async function POST(request: Request) {
     const completion = await groq.chat.completions.create({
       model: groqModel,
       temperature: 0.3,
-      max_tokens: 350,
+      max_completion_tokens: 1024,
+      ...(groqModel.startsWith("openai/gpt-oss-")
+        ? { reasoning_effort: "low" as const, include_reasoning: false }
+        : {}),
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         ...sanitizedMessages,
